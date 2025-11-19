@@ -1,6 +1,6 @@
 const cityInput = document.querySelector(".inputCity");
 const weatherForm = document.querySelector(".weatherForm");
-const apiKey = "9e45fdc6b53b749d027aa045645a0b33";
+const apiKey = "";
 const card = document.querySelector(".card");
 const titleCard = document.querySelector(".titleCard");
 
@@ -54,8 +54,7 @@ function displayWeatherInfo(data) {
     const descDisplay = document.createElement("p");
     const detailsDisplay = document.createElement("div");
 
-    cityDisplay.textContent = (city === "Magugpo Poblacion" ? "Tagum City" : city);
-
+    cityDisplay.textContent = (city === "Magugpo Poblacion" ? "Tagum City" : city); 
     tempDisplay.textContent = `${(temp - 273.15).toFixed(1)}°C`;
     iconDisplay.textContent = getWeatherIcon(id);
     descDisplay.textContent = description.split(" ").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ");
